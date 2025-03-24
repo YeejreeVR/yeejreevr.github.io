@@ -1,14 +1,17 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 .YMT {
-    font-family: 'Lemon Jelly Personal Use', sans-serif;
+    font-family: 'Lemon', serif;
     margin-top: 80%;
     animation: FlyIn 1400ms;
     animation-fill-mode: forwards;
     font-size: 700%;
     animation-play-state: initial;
+    font-weight: 400;
 }
 .Alb {
     margin-top: 10%;
-    background: mediumpurple;
+    background: #8e6cd5;
     border-radius: 60px;
     padding: 7%;
     animation-fill-mode: forwards;
@@ -16,7 +19,7 @@
     animation-play-state: initial;
 }
 .Album-cover {
-    width: 300px;
+    width: 32%;
     margin-left: 1%;
     cursor: pointer;
 
@@ -35,7 +38,10 @@ h3 {
     animation-play-state: initial;
 }
 body {
-    background: lavender;
+    background: #e6e6fa;
+}
+audio {
+    width: 70%;
 }
 @keyframes FlyIn {
     from { opacity: 0; }
