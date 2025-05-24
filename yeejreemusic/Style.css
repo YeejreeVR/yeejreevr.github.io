@@ -1,0 +1,53 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+.YMT {
+    font-family: 'Lemon', serif;
+    margin-top: 80%;
+    animation: FlyIn 1400ms;
+    animation-fill-mode: forwards;
+    font-size: 700%;
+    animation-play-state: initial;
+    font-weight: 400;
+}
+.Alb {
+    margin-top: 10%;
+    background: #8e6cd5;
+    border-radius: 60px;
+    padding: 7%;
+    animation-fill-mode: forwards;
+    animation: FadeIn 3s;
+    animation-play-state: initial;
+}
+.Album-cover {
+    width: 32%;
+    margin-left: 1%;
+    cursor: pointer;
+
+}
+h1 {
+    color: #001f4e;
+    text-align: center;
+    font-size: 500%;
+    margin: 0;
+}
+h3 {
+    text-align: center;
+    margin-top: 12%;
+    animation-fill-mode: forwards;
+    animation: FadeIn 2s;
+    animation-play-state: initial;
+}
+body {
+    background: #e6e6fa;
+}
+audio {
+    width: 70%;
+}
+@keyframes FlyIn {
+    from { opacity: 0; }
+    to { opacity: 1; margin-top: 0 }
+}
+@keyframes FadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
