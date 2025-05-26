@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ghosts of Tabor GPU Calculator</title>
+  </head>
+  <body>
+    <script type="module">
+      import init, { calculate_gpus } from "./pkg/hello_wasm.js";
+      init().then(() => {
+    function calculate_gpus_gui() {
+        const tk = calculate_gpus(document.getElementById("gpus").value ,  document.getElementById("intellv").value, document.getElementById("generatorlevel").value );
+        console.log(tk)
+        const newtk = tk.split("///")
+        document.getElementById("second").textContent = `TK per Second: ${newtk[0]}`
+        document.getElementById("minute").textContent = `TK per Minute: ${newtk[1]}`
+        document.getElementById("hour").textContent = `TK per Hour: ${newtk[2]}`
+        document.getElementById("day").textContent = `TK per Day: ${newtk[3]}`
+        document.getElementById("gas").textContent = `TK per Gas Can: ${newtk[4]}`
+    }
+    document.getElementById("gpus").onchange = calculate_gpus_gui
+    document.getElementById("intellv").onchange = calculate_gpus_gui
+    document.getElementById("generatorlevel").onchange = calculate_gpus_gui;
+      });
+    </script>
+      <input type="number" maxlength="2" id="gpus" placeholder="Number of GPUs" min="1">
+  <select id="intellv">
+    <option value="1">Intel Utility Level 1</option>
+    <option value="2">Intel Utility Level 2</option>
+    <option value="3">Intel Utility Level 3</option>
+  </select>
+  <select id="generatorlevel">
+    <option value="1">Generator Utility Level 1</option>
+    <option value="2">Generator Utility Level 2</option>
+    <option value="3">Generator Utility Level 3</option>
+  </select>
+  <h1 id="second"></h1>
+  <h1 id="minute"></h1>
+  <h1 id="hour"></h1>
+  <h1 id="day"></h1>
+  <h1 id="gas"></h1>
+  </body>
+</html>
