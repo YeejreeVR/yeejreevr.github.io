@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8" />
+    <title>hello-wasm example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script type="module">
+    import init, { getchib } from "./pkg/chibiwasm.js";
+
+    init().then(() => {
+        document.getElementById("newimage").onclick = async function () {document.getElementById("theim").src = await getchib()}
+
+    });
+</script>
+<img id="theim">
+<br>
+<button id="newimage">hello</button>
+</body>
+</html>
