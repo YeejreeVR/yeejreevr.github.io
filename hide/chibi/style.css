@@ -1,0 +1,8 @@
+img {
+    border-radius: 10px;
+    width: 100%;
+}
+body {
+    background: #2e2e2e;
+}
+button {height: 100px; width: 49%;font-size: 150%}
