@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8" />
+    <title>Chibi Chan Basically</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script type="module">
+    import init, { getchib } from "./pkg/chibiwasm.js";
+
+    init().then(() => {
+        document.getElementById("chibi").onclick = async function () {document.getElementById("theim").src = await getchib(false)}
+        document.getElementById("sussy").onclick = async function () {document.getElementById("theim").src = await getchib(true)}
+    });
+</script>
+<img id="theim">
+<br>
+<button id="chibi">chibi</button>
+<button id="sussy">sussy</button>
+</body>
+</html>
