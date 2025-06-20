@@ -1,13 +1,13 @@
 img {
     border-radius: 10px;
-    max-height: 80vh;
+    max-height: 80svh;
     max-width: 100%;
 }
 body {
     background: #2e2e2e;
 }
 button {
-    height: 10vh;
+    height: 10svh;
     width: 49%;
-    font-size: 150%
+    font-size: xxx-large;
 }
