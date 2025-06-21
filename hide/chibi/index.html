@@ -12,6 +12,7 @@
     init().then(() => {
         document.getElementById("chibi").onclick = async function () {document.getElementById("theim").src = await getchib(false)}
         document.getElementById("sussy").onclick = async function () {document.getElementById("theim").src = await getchib(true)}
+        document.getElementById("clip").onclick = function () {navigator.clipboard.writeText(document.getElementById("theim").src)}
     });
 </script>
 <center>
@@ -20,5 +21,9 @@
 <br>
 <button id="chibi">chibi</button>
 <button id="sussy">sussy</button>
+<br>
+
+<button style="width: 98.3%" id="clip">Copy image</button>
+
 </body>
 </html>
