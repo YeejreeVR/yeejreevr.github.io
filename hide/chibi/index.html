@@ -12,7 +12,7 @@
     init().then(() => {
         document.getElementById("chibi").onclick = async function () {document.getElementById("theim").src = await getchib(false)}
         document.getElementById("sussy").onclick = async function () {document.getElementById("theim").src = await getchib(true)}
-        document.getElementById("clip").onclick = function () {navigator.clipboard.writeText(document.getElementById("theim").src)}
+        document.getElementById("clip").onclick = async function () {await navigator.clipboard.writeText(document.getElementById("theim").src)}
     });
 </script>
 <center>
