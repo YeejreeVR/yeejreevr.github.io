@@ -1,7 +1,8 @@
 img {
     border-radius: 10px;
-    max-height: 78svh;
+    max-height: 75svh;
     max-width: 100%;
+    padding-bottom: 0;
 }
 body {
     background: #2e2e2e;
@@ -10,4 +11,5 @@ button {
     height: 10svh;
     width: 49%;
     font-size: xxx-large;
+    padding-top: 0;
 }

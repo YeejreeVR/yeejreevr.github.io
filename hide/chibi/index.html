@@ -12,17 +12,20 @@
     init().then(() => {
         var back = []
         var current = -1
-        document.getElementById("chibi").onclick = async function () {if(current==back.length -1) {current++} back.push(await getchib(false)); document.getElementById("theim").src = back[current]}
-        document.getElementById("sussy").onclick = async function () {if(current==back.length -1) {current++} back.push(await getchib(true)); document.getElementById("theim").src = back[current]}
+        function updatepulls() { document.getElementById("pulls").textContent = current + 1 + "/" + back.length }
+        document.getElementById("chibi").onclick = async function () {if(current==back.length -1) {current++} back.push(await getchib(false)); document.getElementById("theim").src = back[current];updatepulls();}
+        document.getElementById("sussy").onclick = async function () {if(current==back.length -1) {current++} back.push(await getchib(true)); document.getElementById("theim").src = back[current]; updatepulls();}
         document.getElementById("clip").onclick = async function () {await navigator.clipboard.writeText(document.getElementById("theim").src)}
-        document.getElementById("back").onclick = function () {if(current>0) {current--} document.getElementById("theim").src = back[current]}
-        document.getElementById("forward").onclick = function () {if(current<back.length-1) {current++} document.getElementById("theim").src = back[current]}
+        document.getElementById("back").onclick = function () {if(current>0) {current--} document.getElementById("theim").src = back[current]; updatepulls()}
+        document.getElementById("forward").onclick = function () {if(current<back.length-1) {current++} document.getElementById("theim").src = back[current]; updatepulls()}
     });
 </script>
 <center>
 <img id="theim">
+<p id="pulls" style="color: white;padding: -10px;height: 0">0/0</p>
 </center>
 <br>
+
 <button id="chibi">chibi</button>
 <button id="sussy">sussy</button>
 <br>
