@@ -10,9 +10,13 @@
     import init, { getchib } from "./pkg/chibiwasm.js";
 
     init().then(() => {
-        document.getElementById("chibi").onclick = async function () {document.getElementById("theim").src = await getchib(false)}
-        document.getElementById("sussy").onclick = async function () {document.getElementById("theim").src = await getchib(true)}
+        var back = []
+        var current = -1
+        document.getElementById("chibi").onclick = async function () {if(current==back.length -1) {current++} back.push(await getchib(false)); document.getElementById("theim").src = back[current]}
+        document.getElementById("sussy").onclick = async function () {if(current==back.length -1) {current++} back.push(await getchib(true)); document.getElementById("theim").src = back[current]}
         document.getElementById("clip").onclick = async function () {await navigator.clipboard.writeText(document.getElementById("theim").src)}
+        document.getElementById("back").onclick = function () {if(current>0) {current--} document.getElementById("theim").src = back[current]}
+        document.getElementById("forward").onclick = function () {if(current<back.length-1) {current++} document.getElementById("theim").src = back[current]}
     });
 </script>
 <center>
@@ -23,7 +27,8 @@
 <button id="sussy">sussy</button>
 <br>
 
-<button style="width: 98.3%;height: 5svh;font-size: x-large" id="clip">Copy image</button>
-
+<button style="width: 82.3%;height: 5svh;font-size: x-large" id="clip">Copy image</button>
+<button style="width: 7.7%;height: 5svh;font-size: x-large" id="back"><</button>
+<button style="width: 7.7%;height: 5svh;font-size: x-large" id="forward">> </button>
 </body>
 </html>
