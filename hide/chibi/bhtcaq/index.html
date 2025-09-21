@@ -33,14 +33,15 @@
         
         async function sussy_gen() {
             if (sus_enable) {
+                sus_enable = false
+                await new Promise(r => setTimeout(r, 5000));
+                sus_enable = true
                 if(current==back.length -1) {
                     current++
                 }
                 let new_sussy = await sussy_cache.shift()
                 back.push(new_sussy);
-                sus_enable = false
-                await new Promise(r => setTimeout(r, 5000));
-                sus_enable = true
+                
                 document.getElementById("theim").src = back[current];updatepulls();
                 sussy_cache.push(getchib(true));
             }
