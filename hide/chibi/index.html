@@ -2,69 +2,10 @@
 <html lang="en-US">
 <head>
     <meta charset="utf-8" />
-    <title>Chibi Chan Basically</title>
+    <title>very subpar</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<script type="module">
-    import init, { getchib } from "./pkg/chibiwasm.js";
-
-    init().then(() => {
-        let chibi_cache = []
-        for(let i = 0; i < 2; i++) {chibi_cache.push(getchib(false))}
-        let sussy_cache = []
-        for(let i = 0; i < 2; i++) {sussy_cache.push(getchib(true))}
-        let back = []
-        let current = -1
-        function updatepulls() { document.getElementById("pulls").textContent = current + 1 + "/" + back.length }
-        async function chibi_gen() {
-            if(current==back.length -1) {
-                current++
-            }
-            let new_chibi = await chibi_cache.shift()
-            back.push(new_chibi);
-            document.getElementById("theim").src = back[current];updatepulls();
-            chibi_cache.push(getchib(false));
-            for (let i in chibi_cache) {
-                new Image().src = await chibi_cache[i];
-            }
-        }
-        async function sussy_gen() {
-            if(current==back.length -1) {
-                current++
-            }
-            let new_sussy = await sussy_cache.shift()
-            back.push(new_sussy);
-            document.getElementById("theim").src = back[current];updatepulls();
-            sussy_cache.push(getchib(true));
-            for (let i in sussy_cache) {
-                new Image().src = await sussy_cache[i];
-            }
-        }
-
-
-
-
-
-        document.getElementById("chibi").onclick = chibi_gen;
-        document.getElementById("sussy").onclick = sussy_gen;
-        document.getElementById("clip").onclick = async function () {await navigator.clipboard.writeText(document.getElementById("theim").src)}
-        document.getElementById("back").onclick = function () {if(current>0) {current--} document.getElementById("theim").src = back[current]; updatepulls()}
-        document.getElementById("forward").onclick = function () {if(current<back.length-1) {current++} document.getElementById("theim").src = back[current]; updatepulls()}
-    });
-</script>
-<center>
-<img id="theim">
-<p id="pulls" style="color: white;padding: -10px;height: 0">0/0</p>
-</center>
-<br>
-
-<button id="chibi">chibi</button>
-<button id="sussy">sussy</button>
-<br>
-
-<button style="width: 82.3%;height: 5svh;font-size: x-large" id="clip">Copy image</button>
-<button style="width: 7.7%;height: 5svh;font-size: x-large" id="back"><</button>
-<button style="width: 7.7%;height: 5svh;font-size: x-large" id="forward">> </button>
+Had To take down because Mr Smith told :(
 </body>
 </html>
