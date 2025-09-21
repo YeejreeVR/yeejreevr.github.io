@@ -35,6 +35,7 @@
             }
             let new_sussy = await sussy_cache.shift()
             back.push(new_sussy);
+            await new Promise(r => setTimeout(r, 5000));
             document.getElementById("theim").src = back[current];updatepulls();
             sussy_cache.push(getchib(true));
         }
