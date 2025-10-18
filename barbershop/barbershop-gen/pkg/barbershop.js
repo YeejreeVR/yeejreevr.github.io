@@ -62,15 +62,16 @@ function passArrayJsValueToWasm0(array, malloc) {
 }
 /**
  * @param {boolean[]} quartets
+ * @param {boolean} only_shorts
  * @returns {string}
  */
-export function barbershop_gen(quartets) {
+export function barbershop_gen(quartets, only_shorts) {
     let deferred2_0;
     let deferred2_1;
     try {
         const ptr0 = passArrayJsValueToWasm0(quartets, wasm.__wbindgen_malloc);
         const len0 = WASM_VECTOR_LEN;
-        const ret = wasm.barbershop_gen(ptr0, len0);
+        const ret = wasm.barbershop_gen(ptr0, len0, only_shorts);
         deferred2_0 = ret[0];
         deferred2_1 = ret[1];
         return getStringFromWasm0(ret[0], ret[1]);

@@ -21,15 +21,20 @@
     <label for="first_take">First Take</label>
     <input type="checkbox" id="first_take" checked/>
     <br>
-    <input type="button" value="Generate" onclick="window.location.reload();"/>
+    <label for="shorts">Shorts Only?</label>
+    <input type="checkbox" id="shorts" checked/>
+    <input type="button" value="Generate" id="generate"/>
 </center>
 <script type="module">
     import init, { barbershop_gen } from "./pkg/barbershop.js";
 
     init().then(() => {
+        document.getElementById("generate").onclick = function() {var quartet_list = [document.getElementById("lemon_squeezy").checked,document.getElementById("three_and_a_half_men").checked,document.getElementById("midtown").checked,document.getElementById("quorum").checked,document.getElementById("ringmasters").checked,document.getElementById("first_take").checked];
+            var bsg = barbershop_gen(quartet_list,document.getElementById("shorts").checked);
+            document.getElementById("video").src = "https://www.youtube.com/embed/"+bsg+"?autoplay=1&modestbranding=1&rel=0&showinfo=0&controls=0&disablekb=1&fs=0&iv_load_policy=3&cc_load_policy=0&start=0&end=0&origin=https://www.youtube.com";}
         var quartet_list = [document.getElementById("lemon_squeezy").checked,document.getElementById("three_and_a_half_men").checked,document.getElementById("midtown").checked,document.getElementById("quorum").checked,document.getElementById("ringmasters").checked,document.getElementById("first_take").checked];
-        var bsg = barbershop_gen(quartet_list);
-        document.getElementById("video").src = "https://www.youtube.com/embed/"+bsg+"?autoplay=1&modestbranding=1&rel=0&showinfo=0&controls=0&disablekb=1&fs=0&iv_load_policy=3&cc_load_policy=0&start=0&end=0&origin=https://www.youtube.com";
+        var bsg = barbershop_gen(quartet_list,document.getElementById("shorts").checked);
+        document.getElementById("video").src = "https://www.youtube.com/embed/"+bsg+"?autoplay=1&modestbranding=1&rel=0&showinfo=0&controls=0&disablekb=1&fs=0&iv_load_policy=3&cc_load_policy=0&start=0&end=0&origin=https://www.youtube.com&loop=1";
 
     });
 </script>
