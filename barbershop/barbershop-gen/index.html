@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Barbershop or something</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <center>
@@ -23,7 +24,7 @@
     <br>
     <label for="shorts">Shorts Only?</label>
     <input type="checkbox" id="shorts" checked/>
-    <input type="button" value="Generate" id="generate"/>
+    <button id="generate">Generate</button>
 </center>
 <script type="module">
     import init, { barbershop_gen } from "./pkg/barbershop.js";

@@ -1,0 +1,13 @@
+input {
+    height: 3vh;
+    width: 3vh;
+}
+label {
+    height: 5vh;
+    font-size: 2vh;
+}
+button {
+    height: 5vh;
+    width: 10vh;
+    font-size: 2vh;
+}
