@@ -1,0 +1,21 @@
+body {
+    background-color: rgb(0, 10, 19);
+}
+html {
+    background-color: rgb(0, 10, 19);
+}
+h1 {
+    color: rgb(204, 211, 252);
+    margin-bottom: 0px;
+}
+select {
+    background-color: black;
+    color: rgb(238, 200, 255);
+    border-width: 1px;
+    border-color: aqua;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 1px;
+    width: 20svw;
+    margin-bottom: 20px;
+}
