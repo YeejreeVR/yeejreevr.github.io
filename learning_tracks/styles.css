@@ -9,6 +9,12 @@ h1 {
     margin-bottom: 0px;
     font-size: 5svh;
 }
+h4 {
+    color: rgb(204, 211, 252);
+    margin-bottom: 0px;
+    margin-left: 5px;
+    font-size: 3svh;
+}
 select {
     background-color: black;
     color: rgb(238, 200, 255);
@@ -24,4 +30,19 @@ select {
 }
 audio {
     width: 90svw;
+}
+input {
+    background-color: black;
+    border-width: 1px;
+    border-color:rgb(144, 0, 255);
+    border-radius: 10px;
+    width: 60svw;
+    height: 7svh;
+    color:rgb(155, 238, 238);
+    padding-left: 2svw;
+    font-size: 3svh;
+    margin-bottom: 20px;
+}
+input:focus {
+    outline: none;
 }
